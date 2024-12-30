@@ -1,4 +1,13 @@
-:root {}
+:root {
+    --fuentePrincipal: "Staatliches", serif;
+    --colorPrimario: #9C27B0;
+    --colorPrimarioOscuro: #89119D;
+    --colorSecundario: #FFCE00;
+    --colorSecundarioOscuro: rgba(233, 287, 2);
+    --colorBlanco: #FFFFFF;
+    --colorNegro: #000000;
+
+}
 
 html {
     box-sizing: border-box;
@@ -13,5 +22,46 @@ html {
 }
 
 body {
-    font-size: 16px;
+    background-color: var(--colorPrimario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colorBlanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
 }
