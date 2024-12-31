@@ -38,12 +38,13 @@ a {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 h1,
@@ -64,4 +65,253 @@ h2 {
 
 h3 {
     font-size: 2.4rem;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0rem;
+}
+
+.header__logo {}
+
+/* Navegacion */
+.navegacion {
+    display: flex;
+    justify-content: center;
+    background-color: var(--colorPrimarioOscuro);
+    gap: 2rem;
+    padding: 1rem 0rem;
+}
+
+.navegacion__enlace {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--colorBlanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    transition: color .3s ease
+}
+
+.navegacion__enlace:hover {
+    color: var(--colorSecundario);
+
+}
+
+/* Footer */
+.footer {
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1rem 0rem;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    columns: var(--colorBlanco);
+    font-size: 2.2rem;
+}
+
+/* Main de Nuestros Productos */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.producto {
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.producto:hover {
+    color: var(--colorSecundario);
+}
+
+/* @media (min-width: 768px){
+    .producto{
+        width: %;
+    }
+} */
+
+.producto__imagen {
+    width: 100%;
+}
+
+.producto__informacion {
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--fuentePrincipal);
+    /* text-transform: uppercase; */
+}
+
+.producto__nombre {
+    font-size: 3rem;
+}
+
+.producto__precio {
+    color: var(--colorSecundario);
+    font-size: 2.5rem;
+    font-family: var(--fuentePrincipal);
+}
+
+.producto__nombre,
+.producto__precio {
+    margin: 0.5rem auto;
+    font-family: var(--fuentePrincipal);
+    line-height: 1.2;
+}
+
+.grafico {
+    min-height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Imagenes de Banner */
+.grafico--remeras {
+    background-image: url(../img/grafico1.jpg);
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+.grafico--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-column: 1 / -1;
+    grid-row: 7 / 8;
+}
+
+@media (min-width: 768px) {
+    .grafico--remeras {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .grafico--node {
+        grid-column: 2/ 4;
+        grid-row: 5 / 6;
+    }
+
+}
+
+/* Nosotros */
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+@media (min-width: 950px) {
+    .nosotros {
+        flex-direction: row;
+    }
+}
+
+.nosotros__contenido {
+    text-align: justify;
+}
+
+.nosotros__contenido p {
+    margin: 0;
+}
+
+.nosotros__imagen {}
+
+/* Porque comprar */
+
+.comprar {}
+
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.bloque {
+    text-align: center;
+}
+
+@media (min-width: 950px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque__titulo {
+    margin-top: 0;
+}
+
+/* Producto Seleccionado */
+.articulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .articulo {
+        flex-direction: row;
+    }
+}
+
+.articulo__imagen {
+    width: 100%;
+}
+
+.articulo__detalle p {
+    margin: 0;
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.div_seleccionables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+select {
+    border: none;
+    background-color: var(--colorPrimarioOscuro);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colorBlanco);
+    border-radius: 0.5rem;
+}
+
+.detalle__talles,
+.detalle__cantidad {
+    text-align: center;
+    padding: 1rem;
+    color: var(--colorBlanco);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colorPrimarioOscuro);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.detalle__btn {
+    background-color: var(--colorSecundario);
+    color: var(--colorNegro);
+    text-transform: uppercase;
+    font-family: var(--fuentePrincipal);
+    border: none;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
 }
